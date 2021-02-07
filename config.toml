@@ -8,7 +8,7 @@ theme = "porixi"
 disablePathToLower = true
 
 canonifyurls = false
-relativeURLs = false
+relativeURLs = true
 
 [taxonomies]
 luokka = "luokat"
