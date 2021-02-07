@@ -1,0 +1,4 @@
+<div class="floatmenubox">
+{{ $file := .Get "file" | readFile }}
+{{ $file | markdownify }}
+</div>

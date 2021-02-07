@@ -1,0 +1,19 @@
+{{ partial "header.html" . }}
+
+    <div class="main">
+
+{{ partial "toc-pages.html" . }}
+        <div class="content">
+            <article>
+                <h1 class="title">{{.Title}}</h1>
+                <ul class="taxonomylist">
+                {{ $data := .Data }}
+                {{ range $key, $value := .Data.Terms }}
+                    <li style="font-size: {{ add 100 (mul 2 (len $value)) }}%;"><a href="{{ $key | urlize }}" title="{{ len $value }}">{{ $key }}</a></li>
+                {{ end }}
+                </ul>
+            </article>
+        </div>
+    </div>
+
+{{ partial "footer.html" . }}

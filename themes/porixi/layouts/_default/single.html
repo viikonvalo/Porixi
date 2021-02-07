@@ -1,0 +1,23 @@
+{{ partial "header.html" . }}
+
+    <div class="main">
+
+{{ partial "toc-pages.html" . }}
+        <div class="content">
+            <article>
+                <h1 class="page-title">{{ .Title }}</h1>
+                {{ .Content }}
+                <div class="page-classes">
+                    Luokat:
+                    <ul class="page-class-list">
+                        {{ $site := .Site }}
+                        {{ range .Params.Luokat }}
+                            <li class="page-class-item"><a href="{{$site.BaseURL}}/luokat/{{.}}">{{ . }}</a></li>
+			            {{ end }}
+                    </ul>
+                </div>
+            </article>
+        </div>
+    </div>
+
+{{ partial "footer.html" . }}

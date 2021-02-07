@@ -1,0 +1,27 @@
+{{ $baseurl := .Site.BaseURL }}
+{{ partial "header.html" . }}
+
+    <div class="main">
+
+{{ partial "toc-pages.html" . }}
+        <div class="content">
+            <article>
+                <h1 class="categorytitle">{{.Title}}</h1>
+                {{ range .Data.Pages }}
+                <section class="category-item">
+                    <h1 class="title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
+                    <div class="metadata">
+                        <div class="weekdate">
+                            <div class="date">{{ .Date.Format "02.01.2006" }}</div>
+                        </div>
+                    </div>
+                    <div class="excerpt">
+                        {{ if .Params.description }}<p>{{ .Params.description}}</p>{{ end }}
+                    </div>
+                </section>
+                {{ end }}
+            </article>
+        </div>
+    </div>
+
+{{ partial "footer.html" . }}

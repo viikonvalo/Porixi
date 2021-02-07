@@ -1,0 +1,6 @@
+-   [Johdanto](/TeeItseKioskikone "wikilink")
+-   [Debian](/TeeItseKioskikone-Debian "wikilink")
+-   [Ubuntu](/TeeItseKioskikone-Ubuntu "wikilink")
+-   [DSL](/TeeItseKioskikone-DSL "wikilink")
+-   [Webconverger](/TeeItseKioskikone-Webconverger "wikilink")
+-   [Lopuksi](/TeeItseKioskikone-Lopuksi "wikilink")

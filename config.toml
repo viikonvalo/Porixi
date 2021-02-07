@@ -1,0 +1,22 @@
+#baseurl = "http://replace-this-with-your-hugo-site.com/"
+#baseurl = "http://porixi.l-a.fi/"
+baseurl = "/"
+languageCode = "fi-fi"
+pluralizelisttitles = false
+title = "Porixi"
+theme = "porixi"
+disablePathToLower = true
+
+canonifyurls = false
+relativeURLs = true
+
+[taxonomies]
+luokka = "luokat"
+
+[blackfriday]
+    sourceRelativeLinksEval = true
+    smartypants = false
+
+[Params]
+    email = "pesasa@iki.fi"
+    logo = "images/porixipenguinlogo.png"

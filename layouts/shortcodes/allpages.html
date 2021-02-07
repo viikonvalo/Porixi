@@ -1,0 +1,10 @@
+<div class="allpagelist">
+{{ range $.Site.Pages.GroupBy "Section"}}
+{{ if .Key }}<h3 class="allpagelist-section-name">{{ .Key }}</h3>{{ end }}
+<ul class="allpages-section-list" {{ if .Key }}data-section-name="{{ .Key }}"{{ end }}>
+    {{ range .Pages.ByTitle }}
+    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ end }}
+</ul>
+{{ end }}
+</div>

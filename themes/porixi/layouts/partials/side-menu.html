@@ -1,0 +1,36 @@
+{{ $currentpage := . }}
+
+<h2 class="sitetitle"><a href="{{ .Site.BaseURL }}"><span>{{ .Site.Title }}</span></a></h2>
+<ul class="side-menu sidemenu-main">
+    {{ range .Site.Menus.mainside }}
+    <li class="side-menu-item{{if (eq $currentpage .Page) }} active{{end}}"><a href="{{.URL}}">{{ .Name }}</a></li>
+    {{ end }}
+</ul>
+
+<h2 class="side-menu-title">Tutkimuksia</h2>
+<ul class="side-menu">
+    {{ range .Site.Menus.tutkimus }}
+    <li class="side-menu-item{{if (eq $currentpage .Page) }} active{{end}}"><a href="{{.URL}}">{{ .Name }}</a></li>
+    {{ end }}
+</ul>
+
+<h2 class="side-menu-title">Opiskelua</h2>
+<ul class="side-menu">
+    {{ range .Site.Menus.opiskelu }}
+    <li class="side-menu-item{{if (eq $currentpage .Page) }} active{{end}}"><a href="{{.URL}}">{{ .Name }}</a></li>
+    {{ end }}
+</ul>
+
+<h2 class="side-menu-title">TeeItse</h2>
+<ul class="side-menu">
+    {{ range .Site.Menus.teeitse }}
+    <li class="side-menu-item{{if (eq $currentpage .Page) }} active{{end}}"><a href="{{.URL}}">{{ .Name }}</a></li>
+    {{ end }}
+</ul>
+
+<h2 class="side-menu-title">Työkalut</h2>
+<ul class="side-menu">
+    <li class="side-menu-item{{if (eq $currentpage.Title "Kaikki sivut") }} active{{end}}">
+        <a href="{{.Site.BaseURL}}Kaikki_sivut">Kaikki sivut</a>
+    </li>
+</ul>
